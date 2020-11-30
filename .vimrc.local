@@ -15,7 +15,6 @@ au BufEnter * highlight NonText ctermfg=237
 au BufEnter * highlight SpecialKey ctermfg=237
 
 " syntax highlighing
-au! BufRead,BufNewFile *.tpl set filetype=html
 au! BufRead,BufNewFile *.scad set filetype=openscad
 au! BufRead,BufNewFile *.jscad set filetype=javascript
 
@@ -23,30 +22,3 @@ au! BufRead,BufNewFile *.jscad set filetype=javascript
 
 set mouse=a
 set ignorecase
-
-" ctrl-s for save!
-nnoremap <C-s> :Update<CR>
-inoremap <C-s> <Esc>:Update<CR>i
-vnoremap <C-s> <Esc>:Update<CR>v
-
-" ctrl-<ijkl> for arrows!
-noremap <silent> <C-i> <up>
-noremap <silent> <C-k> <down>
-noremap <silent> <C-j> <left>
-noremap <silent> <C-l> <right>
-
-" --------------------
-"  Tilde switches "/'
-" --------------------
-function! TildeSwitch()
-	" 
-	let character = col(".")
-
-	if character == "\""
-	else
-		" If no custom swap, use the regular tilde.
-		normal! ~
-	endif
-endfunction
-
-"nnoremap <silent> ~ :silent call TildeSwitch()<cr>
