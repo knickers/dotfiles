@@ -66,22 +66,18 @@ imap <C-x> <esc>"+dda
 vmap <C-c> "+y
 vmap <C-v> d"+P
 vmap <C-x> "+d
+
 " ctrl+w needs to work in insert mode
 imap <C-w><C-w> <esc><C-w><C-w>a
+
 " ctrl-p for pasting to a new line
 nnoremap <C-p> o<Space><BS><Esc>p
 nnoremap <C-P> O<Space><BS><Esc>p
-" ctrl-s for save!
-"noremap <C-s> <Esc>:Update<CR>
-"inoremap <C-s> <Esc>:Update<CR>i
-" ctrl-<ijkl> for arrows!
-"noremap <silent> <C-i> <up>
-"noremap <silent> <C-k> <down>
-"noremap <silent> <C-j> <left>
-"noremap <silent> <C-l> <right>
+
 " Auto-complete on Ctrl+Space
 inoremap <C-@> <C-P>
 inoremap <C-Space> <C-P>
+
 " use Ctrl+T plus arrow to change tabs: up = first, down = last, left = previous, right = next
 " this is useful in situations where ctrl+pgup and pgdown are taken by the WM
 map <C-t><up> :tabr<cr>
@@ -133,7 +129,6 @@ au FileType cpp noremap <C-L> :!g++ -fsyntax-only %<CR>
 au FileType go noremap <C-L> :!gofmt -d -e -s %<CR>
 au FileType markdown noremap <C-L> :!markdown %<CR>
 au FileType php noremap <C-L> :!php -l %<CR>
-au FileType ruby noremap <C-L> :!ruby -c %<CR>
 au FileType scss.css noremap <C-L> :!sass --no-cache --check %<CR>
 au FileType sh noremap <C-L> :!sh -n %<CR>
 
@@ -146,7 +141,6 @@ au BufEnter *MSG set spell
 set foldmethod=syntax
 set foldlevelstart=99
 let php_folding=1
-let ruby_fold=1
 let g:sh_fold_enabled=7
 let g:vimsyn_folding='af'
 let g:xml_syntax_folding=1
@@ -159,7 +153,6 @@ let &rtp .= ',' . '/usr/lib/go/misc/vim'
 au! BufRead,BufNewFile *.phm set filetype=php " PHP Hypertext Model
 au! BufRead,BufNewFile *.pht set filetype=php " PHP Hypertext Template
 au! BufRead,BufNewFile *.phc set filetype=php " PHP Hypertext Controller
-au! BufRead,BufNewFile *.tpl set filetype=html " smarty template
 au! BufRead,BufNewFile *.scad set filetype=openscad
 au! BufRead,BufNewFile *.jscad set filetype=javascript
 
