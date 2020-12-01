@@ -68,7 +68,7 @@ alias la='ls -Al'
 alias sl='ls -lh'
 alias sla='ls -Alh'
 alias l1='ls -1'
-#alias ..='cd ..'
+alias ..='cd ..'
 alias wget='wget -c'
 
 # safety nets
@@ -79,10 +79,6 @@ alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
 
 alias serve='python -m SimpleHTTPServer'
 #alias yt='docker run --rm -u $(id -u):$(id -g) -v "$PWD":/data vimagick/youtube-dl'
