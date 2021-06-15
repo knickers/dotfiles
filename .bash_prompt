@@ -1,0 +1,16 @@
+if command -v figlet &> /dev/null; then
+	figlet -tc "$USER  @  $HOSTNAME"
+fi
+
+if [ "$USER" == "root" ]; then
+	if command -v figlet &> /dev/null; then
+		echo
+		figlet -tcf small 'yippee ki yay!'
+	fi
+fi
+
+echo
+w                        # uptime and user sessions
+echo
+df -h -x tmpfs | grep -v 'udev\|loop' # disk usage less dev, swap and loop(snap)
+echo
