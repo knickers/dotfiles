@@ -1,7 +1,7 @@
 git config --global alias.st status
 git config --global alias.com commit -v
 git config --global alias.puhs push
-git config --global alias.fetch-dev fetch -u origin release-development:release-development
+git config --global alias.fetch-dev 'fetch -u origin release-development:release-development'
 
 git config --global merge.autostash true
 git config --global rebase.autoStash true
